@@ -87,15 +87,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Gui.cs" />
-    <Compile Include="Assets\NewBehaviourScript.cs" />
-    <Compile Include="Assets\OBJExport\OBJExporter.cs" />
-    <Compile Include="Assets\Penguin\Demo\Scripts\PenguinCameraScript.cs" />
-    <Compile Include="Assets\Penguin\Demo\Scripts\PenguinCharacter.cs" />
-    <Compile Include="Assets\Penguin\Demo\Scripts\PenguinUserController.cs" />
+    <Compile Include="Assets\Adoptables\Penguin\Demo\Scripts\PenguinCharacter.cs" />
+    <Compile Include="Assets\Adoptables\Penguin\Demo\Scripts\PenguinUserController.cs" />
+    <Compile Include="Assets\Adoptables\Script\Gui.cs" />
+    <Compile Include="Assets\Adoptables\Script\PenguinCamera.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Penguin\Readme.txt" />
+    <None Include="Assets\Adoptables\Penguin\Readme.txt" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

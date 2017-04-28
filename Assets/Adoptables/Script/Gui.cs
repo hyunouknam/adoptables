@@ -12,6 +12,7 @@ public class Gui : MonoBehaviour
     public Canvas play;
     public Canvas loading;
     public Canvas submenu;
+	public Canvas food;
 
     void Awake()
     {
@@ -23,6 +24,7 @@ public class Gui : MonoBehaviour
         play.enabled = false;
         loading.enabled = true;
         submenu.enabled = false;
+		food.enabled = false;
 
     }
 
@@ -36,6 +38,7 @@ public class Gui : MonoBehaviour
         play.enabled = false;
         loading.enabled = false;
         submenu.enabled = false;
+		food.enabled = false;
     }
 
     public void ChooseNewAnimalOn()
@@ -48,6 +51,7 @@ public class Gui : MonoBehaviour
         play.enabled = false;
         loading.enabled = false;
         submenu.enabled = false;
+		food.enabled = false;
     }
 
     public void ChooseOWnedAnimalOn()
@@ -60,6 +64,7 @@ public class Gui : MonoBehaviour
         play.enabled = false;
         loading.enabled = false;
         submenu.enabled = false;
+		food.enabled = false;
     }
 
     public void AnimalNameOn()
@@ -72,6 +77,7 @@ public class Gui : MonoBehaviour
         play.enabled = false;
         loading.enabled = false;
         submenu.enabled = false;
+		food.enabled = false;
     }
 
     public void StatusOn()
@@ -84,6 +90,7 @@ public class Gui : MonoBehaviour
         play.enabled = false;
         loading.enabled = false;
         submenu.enabled = false;
+		food.enabled = false;
     }
 
     public void PlayOn()
@@ -96,6 +103,7 @@ public class Gui : MonoBehaviour
         play.enabled = true;
         loading.enabled = false;
         submenu.enabled = false;
+		food.enabled = false;
     }
 
     public void SubMenuOn()
@@ -108,5 +116,19 @@ public class Gui : MonoBehaviour
         play.enabled = false;
         loading.enabled = false;
         submenu.enabled = true;
+		food.enabled = false;
     }
+
+	public void FoodOn()
+	{
+		menu.enabled = false;
+		chooseNewAnimal.enabled = false;
+		chooseOwnedAnimal.enabled = false;
+		animalName.enabled = false;
+		status.enabled = false;
+		play.enabled = false;
+		loading.enabled = false;
+		submenu.enabled = false;
+		food.enabled = true;
+	}
 }

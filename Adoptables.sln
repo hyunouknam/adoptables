@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adoptables", "Assembly-CSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adoptables", "Assembly-CSharp-Editor-firstpass.csproj", "{34E60765-153C-076C-F042-2F353C0DEBBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adoptables", "Assembly-UnityScript.unityproj", "{7700CB7C-C2FF-F874-5FF5-F21EB47B78BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{34E60765-153C-076C-F042-2F353C0DEBBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34E60765-153C-076C-F042-2F353C0DEBBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34E60765-153C-076C-F042-2F353C0DEBBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7700CB7C-C2FF-F874-5FF5-F21EB47B78BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7700CB7C-C2FF-F874-5FF5-F21EB47B78BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7700CB7C-C2FF-F874-5FF5-F21EB47B78BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7700CB7C-C2FF-F874-5FF5-F21EB47B78BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

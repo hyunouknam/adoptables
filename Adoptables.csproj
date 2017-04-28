@@ -92,6 +92,7 @@
     <Compile Include="Assets\Adoptables\Script\Feed.cs" />
     <Compile Include="Assets\Adoptables\Script\Gui.cs" />
     <Compile Include="Assets\Adoptables\Script\PenguinCamera.cs" />
+    <Compile Include="Assets\Adoptables\Script\Shower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Adoptables\Penguin\Readme.txt" />

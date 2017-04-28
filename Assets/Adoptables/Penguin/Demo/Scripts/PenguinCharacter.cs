@@ -28,8 +28,13 @@ public class PenguinCharacter : MonoBehaviour {
 	void FixedUpdate(){
 		CheckGroundStatus ();
 	}
-	
-	public void Attack(){
+
+    /*public void Poop()
+    {
+        penguinAnimator.SetTrigger("Poop");
+    }*/
+
+    public void Attack(){
 		penguinAnimator.SetTrigger("Attack");
 	}
 	

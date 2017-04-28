@@ -16,8 +16,8 @@ public class PenguinCamera : MonoBehaviour
         Quaternion arotation = Quaternion.identity;
         Vector3 eua = Vector3.zero;
         eua.y = 360f - cameraAngleY;
-        eua.z = 0f;
-        eua.x = 180f + cameraAngleX;
+        eua.z = 180f;
+        eua.x = cameraAngleX;
         arotation.eulerAngles = eua;
         transform.localRotation = arotation;
     }
@@ -34,7 +34,7 @@ public class PenguinCamera : MonoBehaviour
             CameraRotationX();
             CameraRotationY();
             cameraDistance = cameraDistance + Time.deltaTime * Input.GetAxis("Mouse ScrollWheel");
-            penguinCamera.transform.localPosition = new Vector3(0f, cameraDistance, -2f * cameraDistance);
+            penguinCamera.transform.localPosition = new Vector3(0f, cameraDistance, -4f * cameraDistance);
         }
     }
 
@@ -48,8 +48,8 @@ public class PenguinCamera : MonoBehaviour
         Quaternion arotation = Quaternion.identity;
         Vector3 eua = Vector3.zero;
         eua.y = 360f - cameraAngleY;
-        eua.z = 0f;
-        eua.x = 180f + cameraAngleX;
+        eua.z = 180f;
+        eua.x = cameraAngleX;
         arotation.eulerAngles = eua;
         transform.localRotation = arotation;
     }
@@ -58,8 +58,8 @@ public class PenguinCamera : MonoBehaviour
         Quaternion arotation = Quaternion.identity;
         Vector3 eua = Vector3.zero;
         eua.y = 360f - cameraAngleY;
-        eua.z = 0f;
-        eua.x = 180f + cameraAngleX;
+        eua.z = 180f;
+        eua.x = cameraAngleX;
         arotation.eulerAngles = eua;
         transform.localRotation = arotation;
     }

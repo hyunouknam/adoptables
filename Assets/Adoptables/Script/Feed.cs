@@ -1,10 +1,13 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Feed : MonoBehaviour {
 	PenguinCharacter penguinCharacter;
     Animator penguinAnimator;
+    //Stats stats;
+
+    public Slider hunger;
 
     public GameObject krill;
     public GameObject octopus;
@@ -12,10 +15,13 @@ public class Feed : MonoBehaviour {
 
     public GameObject food;
 
+
+
     // Use this for initialization
     void Start () {
 		penguinCharacter = GetComponent <PenguinCharacter> ();
         penguinAnimator = GetComponent<Animator>();
+        //stats = GetComponent<Stats>();
     }
 
 	// Update is called once per frame
@@ -44,6 +50,7 @@ public class Feed : MonoBehaviour {
         if (this.penguinAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
             penguinCharacter.Eat();
+            hunger.value += 0.3f;
         }
     }
 

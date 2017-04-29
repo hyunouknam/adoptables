@@ -54,7 +54,7 @@ public class Gui : MonoBehaviour
 		food.enabled = false;
     }
 
-    public void ChooseOWnedAnimalOn()
+    public void ChooseOwnedAnimalOn()
     {
         menu.enabled = false;
         chooseNewAnimal.enabled = false;

@@ -92,6 +92,7 @@
     <Compile Include="Assets\Adoptables\Script\PenguinCamera.cs" />
     <Compile Include="Assets\Adoptables\Script\PenguinCharacter.cs" />
     <Compile Include="Assets\Adoptables\Script\PenguinUserController.cs" />
+    <Compile Include="Assets\Adoptables\Script\SaveLoad.cs" />
     <Compile Include="Assets\Adoptables\Script\Shower.cs" />
     <Compile Include="Assets\Adoptables\Script\Stats.cs" />
   </ItemGroup>

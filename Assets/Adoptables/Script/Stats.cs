@@ -16,12 +16,14 @@ public class Stats : MonoBehaviour
     public Slider affection;
     public Slider health;
 
+    public Text name;
+
     //public string animalName;
 
 
     void Start()
     {
-
+        name.text = "Some cool name";
     }
 
     void Update()

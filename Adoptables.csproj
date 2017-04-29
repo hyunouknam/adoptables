@@ -87,11 +87,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Adoptables\Penguin\Demo\Scripts\PenguinCharacter.cs" />
-    <Compile Include="Assets\Adoptables\Penguin\Demo\Scripts\PenguinUserController.cs" />
     <Compile Include="Assets\Adoptables\Script\Feed.cs" />
     <Compile Include="Assets\Adoptables\Script\Gui.cs" />
     <Compile Include="Assets\Adoptables\Script\PenguinCamera.cs" />
+    <Compile Include="Assets\Adoptables\Script\PenguinCharacter.cs" />
+    <Compile Include="Assets\Adoptables\Script\PenguinUserController.cs" />
     <Compile Include="Assets\Adoptables\Script\Shower.cs" />
   </ItemGroup>
   <ItemGroup>

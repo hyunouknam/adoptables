@@ -62,16 +62,25 @@ public class Feed : MonoBehaviour {
 
         //food.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.red);
 
-        krill.SetActive(true);
+        if (this.penguinAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            krill.SetActive(true);
+        }
     }
 
     public void EatOctopus()
     {
-        octopus.SetActive(true);
+        if (this.penguinAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            octopus.SetActive(true);
+        }
     }
 
     public void EatFish()
     {
-        fish.SetActive(true);
+        if (this.penguinAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            fish.SetActive(true);
+        }
     }
 }

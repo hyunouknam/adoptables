@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shower : MonoBehaviour
 {
-    public GameObject waterfall;
     Animator penguinAnimator;
     PenguinCharacter penguinCharacter;
+
+    public GameObject waterfall;
+    public Slider health;
 
 
     // Use this for initialization
@@ -23,6 +26,7 @@ public class Shower : MonoBehaviour
         if (waterfall.activeSelf)
         {
             penguinCharacter.Flap();
+            health.value += 0.001f;
         }
     }
 

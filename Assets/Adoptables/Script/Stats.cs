@@ -27,5 +27,7 @@ public class Stats : MonoBehaviour
     void Update()
     {
         hunger.value -= 0.00002f;
+        affection.value -= 0.00002f;
+        health.value -= 0.00001f;
     }
 }

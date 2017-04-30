@@ -26,7 +26,7 @@ public class Shower : MonoBehaviour
         if (waterfall.activeSelf)
         {
             penguinCharacter.Flap();
-            health.value += 0.001f;
+            health.value += 0.0005f;
         }
     }
 

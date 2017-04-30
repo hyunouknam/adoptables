@@ -8,6 +8,7 @@ public class SaveLoad : MonoBehaviour
     public Slider hunger;
     public Slider affection;
     public Slider health;
+    public Text level;
 
     public Text displayingName;
     //public InputField inputName;
@@ -18,11 +19,11 @@ public class SaveLoad : MonoBehaviour
 
     }
 
-    void Update ()
+    void Update()
     {
 
     }
-    
+
     public void Save()
     {
         PlayerPrefs.SetString("displayingName", displayingName.text);
@@ -30,6 +31,7 @@ public class SaveLoad : MonoBehaviour
         PlayerPrefs.SetFloat("hunger", hunger.value);
         PlayerPrefs.SetFloat("affection", affection.value);
         PlayerPrefs.SetFloat("health", health.value);
+        PlayerPrefs.SetString("level", level.text);
     }
 
     public void LoadName()
@@ -43,5 +45,6 @@ public class SaveLoad : MonoBehaviour
         hunger.value = PlayerPrefs.GetFloat("hunger");
         affection.value = PlayerPrefs.GetFloat("affection");
         health.value = PlayerPrefs.GetFloat("health");
+        level.text = PlayerPrefs.GetString("level");
     }
 }

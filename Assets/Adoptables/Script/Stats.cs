@@ -15,9 +15,12 @@ public class Stats : MonoBehaviour
     public Slider hunger;
     public Slider affection;
     public Slider health;
+    public Text level;
 
     public Text displayingName;
     public InputField inputName;
+
+    int temp;
 
 
     void Start()
@@ -27,9 +30,22 @@ public class Stats : MonoBehaviour
 
     void Update()
     {
-        hunger.value -= 0.00002f;
-        affection.value -= 0.00002f;
-        health.value -= 0.00001f;
+        hunger.value -= 0.00003f;
+        health.value -= 0.00002f;
+
+        if(hunger.value >= 0.6f && health.value >= 0.6f)
+        {
+            affection.value += 0.00015f;
+        }
+
+        if(affection.value >= 1f)
+        {
+            temp = int.Parse(level.text);
+            temp++;
+            level.text = temp.ToString();
+            affection.value = 0f;
+        }
+
     }
 
     public void UpdateName()

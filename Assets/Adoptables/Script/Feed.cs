@@ -8,6 +8,8 @@ public class Feed : MonoBehaviour {
     //Stats stats;
 
     public Slider hunger;
+    public Slider health;
+    public Slider affection;
 
     public GameObject krill;
     public GameObject octopus;
@@ -51,6 +53,8 @@ public class Feed : MonoBehaviour {
         {
             penguinCharacter.Eat();
             hunger.value += 0.3f;
+            health.value += 0.075f;
+            affection.value += 0.1f;
         }
     }
 

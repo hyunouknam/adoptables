@@ -16,14 +16,13 @@ public class Stats : MonoBehaviour
     public Slider affection;
     public Slider health;
 
-    public Text name;
-
-    //public string animalName;
+    public Text displayingName;
+    public InputField inputName;
 
 
     void Start()
     {
-        name.text = "Some cool name";
+        //displayingName.text = "Some cool name";
     }
 
     void Update()
@@ -31,5 +30,10 @@ public class Stats : MonoBehaviour
         hunger.value -= 0.00002f;
         affection.value -= 0.00002f;
         health.value -= 0.00001f;
+    }
+
+    public void UpdateName()
+    {
+        displayingName.text = inputName.text;
     }
 }

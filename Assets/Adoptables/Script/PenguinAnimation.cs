@@ -1,23 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 
 public class PenguinAnimation : MonoBehaviour {
 	PenguinCharacter penguinCharacter;
     public Canvas race;
+    public Canvas play;
+
+    public Text counter;
+    int temp;
 
 
-    
-	
-	void Start () {
+    void Start () {
 		penguinCharacter = GetComponent <PenguinCharacter> ();
         penguinCharacter.Toboggan();
     }
-	
-	void Update () {
+
+    void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.name == "Race Wall")
+        {
+
+            temp = int.Parse(counter.text);
+            temp++;
+
+            if (temp == 4)
+            {
+                race.enabled = false;
+                play.enabled = true;
+                temp = 0;
+                
+            }
+            counter.text = temp.ToString();
+        }
+    }
+
+    void Update () {
         if (race.enabled)
         {
-            penguinCharacter.transform.localPosition += Vector3.forward * Time.deltaTime;
+            penguinCharacter.transform.localPosition += Vector3.forward * Time.deltaTime * Random.value * Random.value;
+
         }
+
 		
 		if (Input.GetKeyDown (KeyCode.E)) {
 			penguinCharacter.Eat();

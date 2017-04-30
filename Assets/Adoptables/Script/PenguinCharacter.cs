@@ -24,7 +24,7 @@ public class PenguinCharacter : MonoBehaviour {
 		penguinAnimator = GetComponent<Animator> ();
 		penguinRigid=GetComponent<Rigidbody>();
 	}
-	
+
 	void FixedUpdate(){
 		CheckGroundStatus ();
 	}

@@ -14,7 +14,7 @@ public class PenguinAnimation : MonoBehaviour {
 
     void Start () {
 		penguinCharacter = GetComponent <PenguinCharacter> ();
-        penguinCharacter.Toboggan();
+        
     }
 
     void OnCollisionEnter(Collision col)
@@ -25,7 +25,7 @@ public class PenguinAnimation : MonoBehaviour {
             temp = int.Parse(counter.text);
             temp++;
 
-            if (temp == 4)
+            if (temp == 4)  // race finished
             {
                 race.enabled = false;
                 play.enabled = true;
@@ -39,6 +39,7 @@ public class PenguinAnimation : MonoBehaviour {
     void Update () {
         if (race.enabled)
         {
+            penguinCharacter.Toboggan();
             penguinCharacter.transform.localPosition += Vector3.forward * Time.deltaTime * Random.value * Random.value;
 
         }

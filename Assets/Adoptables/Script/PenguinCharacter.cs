@@ -29,11 +29,6 @@ public class PenguinCharacter : MonoBehaviour {
 		CheckGroundStatus ();
 	}
 
-    /*public void Poop()
-    {
-        penguinAnimator.SetTrigger("Poop");
-    }*/
-
     public void Attack(){
 		penguinAnimator.SetTrigger("Attack");
 	}
@@ -63,9 +58,10 @@ public class PenguinCharacter : MonoBehaviour {
 	}
 	
 	public void Toboggan(){
-		penguinAnimator.SetTrigger("Toboggan");
+        penguinAnimator.SetTrigger("Toboggan");
 		isTobogganing = true;
 		penguinAnimator.applyRootMotion = false;
+
 
 	}	
 	public void StandUp(){

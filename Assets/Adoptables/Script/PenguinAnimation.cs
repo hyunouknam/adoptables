@@ -1,25 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PenguinUserController : MonoBehaviour {
+public class PenguinAnimation : MonoBehaviour {
 	PenguinCharacter penguinCharacter;
+    public Canvas race;
+
+
+    
 	
 	void Start () {
 		penguinCharacter = GetComponent <PenguinCharacter> ();
-	}
+        penguinCharacter.Toboggan();
+    }
 	
-	void Update () {	
-		if (Input.GetButtonDown ("Fire1")) {
-			penguinCharacter.Attack();
-		}
-		
-		if (Input.GetButtonDown ("Jump")) {
-			penguinCharacter.Jump();
-		}
-		
-		if (Input.GetKeyDown (KeyCode.H)) {
-			penguinCharacter.Hit();
-		}
+	void Update () {
+        if (race.enabled)
+        {
+            penguinCharacter.transform.localPosition += Vector3.forward * Time.deltaTime;
+        }
 		
 		if (Input.GetKeyDown (KeyCode.E)) {
 			penguinCharacter.Eat();
@@ -45,15 +43,6 @@ public class PenguinUserController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.T)) {
 			penguinCharacter.Toboggan();
 		}				
-		if (Input.GetKeyDown (KeyCode.V)) {
-			penguinCharacter.Dive();
-		}	
-		if (Input.GetKeyDown (KeyCode.C)) {
-			penguinCharacter.CatchTheRock();
-		}	
-		if (Input.GetKeyDown (KeyCode.R)) {
-			penguinCharacter.ReleaseTheRock();
-		}	
 
 		if (Input.GetKeyDown (KeyCode.I)) {
 			penguinCharacter.SwimStart();
@@ -70,7 +59,8 @@ public class PenguinUserController : MonoBehaviour {
 	{
 		float h = Input.GetAxis ("Horizontal");
 		float v = Input.GetAxis ("Vertical");
-		if (Input.GetKey(KeyCode.LeftShift)) v *= 0.5f;
-		penguinCharacter.Move (v,h);
+        //if (Input.GetKey(KeyCode.LeftShift)) v *= 0.5f;
+        v *= 0.5f;
+        penguinCharacter.Move (v,h);
 	}
 }

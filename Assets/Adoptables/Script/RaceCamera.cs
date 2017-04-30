@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PenguinCamera : MonoBehaviour
+public class RaceCamera : MonoBehaviour
 {
     public GameObject target;
     public float turnSpeed = .2f;
-    public GameObject penguinCamera;
+    public GameObject raceCamera;
     float cameraAngleX = 180f;
     float cameraAngleY = 0f;
     public float cameraDistance = 3f;
-    public Canvas play;
+    public Canvas race;
 
     public void Start()
     {
@@ -24,12 +24,11 @@ public class PenguinCamera : MonoBehaviour
 
     void Update()
     {
-        if (play.enabled)
+        if (race.enabled)
         {
-            
             CameraRotation();
 
-            penguinCamera.transform.localPosition = new Vector3(0f, cameraDistance, -4f * cameraDistance);
+            raceCamera.transform.localPosition = new Vector3(0f, cameraDistance, -10f * cameraDistance);
         }
 
     }
@@ -43,16 +42,16 @@ public class PenguinCamera : MonoBehaviour
     {
         Quaternion arotation = Quaternion.identity;
         Vector3 eua = Vector3.zero;
-        eua.y = 360f - cameraAngleY;
+        eua.y = 270f - cameraAngleY;
         eua.z = 180f;
-        eua.x = cameraAngleX;
+        eua.x = -25f + cameraAngleX;
         arotation.eulerAngles = eua;
         transform.localRotation = arotation;
     }
-
+    
     void FixedUpdate()
     {
-        if (play.enabled)
+        if (race.enabled)
         {
             transform.position = Vector3.Lerp(transform.position, target.transform.position, Time.deltaTime * 10f);
         }

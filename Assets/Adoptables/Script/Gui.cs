@@ -13,6 +13,7 @@ public class Gui : MonoBehaviour
     public Canvas loading;
     public Canvas submenu;
 	public Canvas food;
+    public Canvas race;
 
     void Awake()
     {
@@ -25,6 +26,7 @@ public class Gui : MonoBehaviour
         loading.enabled = true;
         submenu.enabled = false;
 		food.enabled = false;
+        race.enabled = false;
 
     }
 
@@ -39,6 +41,7 @@ public class Gui : MonoBehaviour
         loading.enabled = false;
         submenu.enabled = false;
 		food.enabled = false;
+        race.enabled = false;
     }
 
     public void ChooseNewAnimalOn()
@@ -52,6 +55,7 @@ public class Gui : MonoBehaviour
         loading.enabled = false;
         submenu.enabled = false;
 		food.enabled = false;
+        race.enabled = false;
     }
 
     public void ChooseOwnedAnimalOn()
@@ -65,6 +69,7 @@ public class Gui : MonoBehaviour
         loading.enabled = false;
         submenu.enabled = false;
 		food.enabled = false;
+        race.enabled = false;
     }
 
     public void AnimalNameOn()
@@ -78,6 +83,7 @@ public class Gui : MonoBehaviour
         loading.enabled = false;
         submenu.enabled = false;
 		food.enabled = false;
+        race.enabled = false;
     }
 
     public void StatusOn()
@@ -91,6 +97,7 @@ public class Gui : MonoBehaviour
         loading.enabled = false;
         submenu.enabled = false;
 		food.enabled = false;
+        race.enabled = false;
     }
 
     public void PlayOn()
@@ -104,6 +111,7 @@ public class Gui : MonoBehaviour
         loading.enabled = false;
         submenu.enabled = false;
 		food.enabled = false;
+        race.enabled = false;
     }
 
     public void SubMenuOn()
@@ -117,6 +125,7 @@ public class Gui : MonoBehaviour
         loading.enabled = false;
         submenu.enabled = true;
 		food.enabled = false;
+        race.enabled = false;
     }
 
 	public void FoodOn()
@@ -130,5 +139,20 @@ public class Gui : MonoBehaviour
 		loading.enabled = false;
 		submenu.enabled = false;
 		food.enabled = true;
-	}
+        race.enabled = false;
+    }
+
+    public void RaceOn()
+    {
+        menu.enabled = false;
+        chooseNewAnimal.enabled = false;
+        chooseOwnedAnimal.enabled = false;
+        animalName.enabled = false;
+        status.enabled = false;
+        play.enabled = false;
+        loading.enabled = false;
+        submenu.enabled = false;
+        food.enabled = false;
+        race.enabled = true;
+    }
 }

@@ -15,6 +15,15 @@ public class PenguinAnimation : MonoBehaviour {
     public Text silver;
     public Text bronze;
 
+    public Image goldImage;
+    public Image silverImage;
+    public Image bronzeImage;
+
+    public Image first;
+    public Image second;
+    public Image third;
+    public Image fourth;
+
     public Text affectionLevel;
 
     int tempMedal;
@@ -44,6 +53,14 @@ public class PenguinAnimation : MonoBehaviour {
                     tempMedal = int.Parse(gold.text);
                     tempMedal++;
                     gold.text = tempMedal.ToString();
+                    goldImage.enabled = true;
+                    silverImage.enabled = false;
+                    bronzeImage.enabled = false;
+
+                    first.enabled = true;
+                    second.enabled = false;
+                    third.enabled = false;
+                    fourth.enabled = false;
 
                 }
                 else if(temp == 2)
@@ -51,16 +68,39 @@ public class PenguinAnimation : MonoBehaviour {
                     tempMedal = int.Parse(silver.text);
                     tempMedal++;
                     silver.text = tempMedal.ToString();
+                    goldImage.enabled = false;
+                    silverImage.enabled = true;
+                    bronzeImage.enabled = false;
+
+                    first.enabled = false;
+                    second.enabled = true;
+                    third.enabled = false;
+                    fourth.enabled = false;
                 }
                 else if(temp == 3)
                 {
                     tempMedal = int.Parse(bronze.text);
                     tempMedal++;
                     bronze.text = tempMedal.ToString();
+                    goldImage.enabled = false;
+                    silverImage.enabled = false;
+                    bronzeImage.enabled = true;
+
+                    first.enabled = false;
+                    second.enabled = false;
+                    third.enabled = true;
+                    fourth.enabled = false;
                 }
                 else
                 {
+                    goldImage.enabled = false;
+                    silverImage.enabled = false;
+                    bronzeImage.enabled = false;
 
+                    first.enabled = false;
+                    second.enabled = false;
+                    third.enabled = false;
+                    fourth.enabled = true;
                 }
 
             }
@@ -81,29 +121,31 @@ public class PenguinAnimation : MonoBehaviour {
     {
         if (penguinCharacter.name == "You")
         {
-            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 48);
+            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 33);
         }
 
         if (penguinCharacter.name == "Penguin 2")
         {
-            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 48);
+            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 33);
         }
 
         if (penguinCharacter.name == "Penguin 3")
         {
-            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 48);
+            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 33);
         }
 
         if (penguinCharacter.name == "Penguin 4")
         {
-            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 48);
+            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 33);
         }
+
     }
 
     void Update () {
         if (race.enabled)
         {
             penguinCharacter.Toboggan();
+
             if (penguinCharacter.name == "You")
             {
                 tempLevel = int.Parse(affectionLevel.text);

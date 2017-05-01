@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Feed : MonoBehaviour {
 	PenguinCharacter penguinCharacter;
     Animator penguinAnimator;
-    //Stats stats;
+    public AudioClip penguinSound;
 
     public Slider hunger;
     public Slider health;
@@ -23,7 +23,8 @@ public class Feed : MonoBehaviour {
     void Start () {
 		penguinCharacter = GetComponent <PenguinCharacter> ();
         penguinAnimator = GetComponent<Animator>();
-        //stats = GetComponent<Stats>();
+
+        AudioSource audio = GetComponent<AudioSource>();
     }
 
 	// Update is called once per frame

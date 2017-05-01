@@ -11,8 +11,13 @@ public class PenguinAnimation : MonoBehaviour {
     public Text place;
     public Text counter;
 
+    public Text gold;
+    public Text silver;
+    public Text bronze;
+
     public Text affectionLevel;
 
+    int tempMedal;
     int temp;
     float tempLevel;
 
@@ -34,6 +39,30 @@ public class PenguinAnimation : MonoBehaviour {
             if (penguinCharacter.name == "You")
             {
                 place.text = temp.ToString();
+                if(temp == 1)
+                {
+                    tempMedal = int.Parse(gold.text);
+                    tempMedal++;
+                    gold.text = tempMedal.ToString();
+
+                }
+                else if(temp == 2)
+                {
+                    tempMedal = int.Parse(silver.text);
+                    tempMedal++;
+                    silver.text = tempMedal.ToString();
+                }
+                else if(temp == 3)
+                {
+                    tempMedal = int.Parse(bronze.text);
+                    tempMedal++;
+                    bronze.text = tempMedal.ToString();
+                }
+                else
+                {
+
+                }
+
             }
 
             if (temp == 4)  // race finished

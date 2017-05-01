@@ -15,6 +15,11 @@ public class Gui : MonoBehaviour
 	public Canvas food;
     public Canvas race;
     public Canvas finish;
+    public Canvas info;
+
+    public Text eat;
+    public Text shower;
+    public Text defaultMessage;
 
     void Awake()
     {
@@ -29,6 +34,11 @@ public class Gui : MonoBehaviour
 		food.enabled = false;
         race.enabled = false;
         finish.enabled = false;
+        info.enabled = false;
+
+        defaultMessage.enabled = true;
+        eat.enabled = false;
+        shower.enabled = false;
 
     }
 
@@ -45,6 +55,7 @@ public class Gui : MonoBehaviour
 		food.enabled = false;
         race.enabled = false;
         finish.enabled = false;
+        info.enabled = false;
     }
 
     public void ChooseNewAnimalOn()
@@ -60,6 +71,7 @@ public class Gui : MonoBehaviour
 		food.enabled = false;
         race.enabled = false;
         finish.enabled = false;
+        info.enabled = false;
     }
 
     public void ChooseOwnedAnimalOn()
@@ -75,6 +87,7 @@ public class Gui : MonoBehaviour
 		food.enabled = false;
         race.enabled = false;
         finish.enabled = false;
+        info.enabled = false;
     }
 
     public void AnimalNameOn()
@@ -90,6 +103,7 @@ public class Gui : MonoBehaviour
 		food.enabled = false;
         race.enabled = false;
         finish.enabled = false;
+        info.enabled = false;
     }
 
     public void StatusOn()
@@ -105,6 +119,7 @@ public class Gui : MonoBehaviour
 		food.enabled = false;
         race.enabled = false;
         finish.enabled = false;
+        info.enabled = false;
     }
 
     public void PlayOn()
@@ -120,6 +135,7 @@ public class Gui : MonoBehaviour
 		food.enabled = false;
         race.enabled = false;
         finish.enabled = false;
+        info.enabled = false;
     }
 
     public void SubMenuOn()
@@ -135,6 +151,7 @@ public class Gui : MonoBehaviour
 		food.enabled = false;
         race.enabled = false;
         finish.enabled = false;
+        info.enabled = false;
     }
 
 	public void FoodOn()
@@ -150,6 +167,23 @@ public class Gui : MonoBehaviour
 		food.enabled = true;
         race.enabled = false;
         finish.enabled = false;
+        info.enabled = false;
+    }
+
+    public void InfoOn()
+    {
+        menu.enabled = false;
+        chooseNewAnimal.enabled = false;
+        chooseOwnedAnimal.enabled = false;
+        animalName.enabled = false;
+        status.enabled = false;
+        play.enabled = false;
+        loading.enabled = false;
+        submenu.enabled = false;
+        food.enabled = false;
+        race.enabled = false;
+        finish.enabled = false;
+        info.enabled = true;
     }
 
     public void RaceOn()
@@ -180,5 +214,26 @@ public class Gui : MonoBehaviour
         food.enabled = false;
         race.enabled = false;
         finish.enabled = true;
+    }
+
+    public void EatInfoOn()
+    {
+        eat.enabled = true;
+        shower.enabled = false;
+        defaultMessage.enabled = false;
+    }
+
+    public void ShowerInfoOn()
+    {
+        eat.enabled = false;
+        shower.enabled = true;
+        defaultMessage.enabled = false;
+    }
+
+    public void DefaultInfoOn()
+    {
+        eat.enabled = false;
+        shower.enabled = false;
+        defaultMessage.enabled = true;
     }
 }

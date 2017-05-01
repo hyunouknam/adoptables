@@ -6,6 +6,7 @@ public class Feed : MonoBehaviour {
 	PenguinCharacter penguinCharacter;
     Animator penguinAnimator;
     public AudioClip penguinSound;
+    AudioSource audio;
 
     public Slider hunger;
     public Slider health;
@@ -24,7 +25,7 @@ public class Feed : MonoBehaviour {
 		penguinCharacter = GetComponent <PenguinCharacter> ();
         penguinAnimator = GetComponent<Animator>();
 
-        AudioSource audio = GetComponent<AudioSource>();
+        audio = GetComponent<AudioSource>();
     }
 
 	// Update is called once per frame
@@ -56,6 +57,9 @@ public class Feed : MonoBehaviour {
             hunger.value += 0.3f;
             health.value += 0.075f;
             affection.value += 0.1f;
+
+            audio.clip = penguinSound;
+            audio.Play();
         }
     }
 

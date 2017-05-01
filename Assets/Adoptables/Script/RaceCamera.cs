@@ -11,6 +11,8 @@ public class RaceCamera : MonoBehaviour
     public float cameraDistance = 3f;
     public Canvas race;
 
+    // This follows your penguin in the race
+
     public void Start()
     {
         Quaternion arotation = Quaternion.identity;

@@ -30,6 +30,8 @@ public class SaveLoad : MonoBehaviour
 
     public void Save()
     {
+        //Saves all the information
+
         PlayerPrefs.SetString("displayingName", displayingName.text);
 
         PlayerPrefs.SetFloat("hunger", hunger.value);
@@ -48,6 +50,7 @@ public class SaveLoad : MonoBehaviour
 
     public void Load()
     {
+        //Loads all information
 
         hunger.value = PlayerPrefs.GetFloat("hunger");
         affection.value = PlayerPrefs.GetFloat("affection");

@@ -12,6 +12,8 @@ public class PenguinCamera : MonoBehaviour
     public Canvas play;
     public Canvas finish;
 
+    //This follows the penguin in the play screen
+
     public void Start()
     {
         Quaternion arotation = Quaternion.identity;

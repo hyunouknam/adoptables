@@ -23,6 +23,7 @@ public class Shower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //restores health value while showering
         if (waterfall.activeSelf)
         {
             penguinCharacter.Flap();
@@ -32,6 +33,7 @@ public class Shower : MonoBehaviour
 
     public void TurnOnOffShower()
     {
+        //turns on/off shower
         if (waterfall.activeSelf)
         {
             waterfall.SetActive(false);

@@ -11,15 +11,13 @@ public class PenguinCharacter : MonoBehaviour {
 	public float swimSpeed=3f;
 	public float tobogganSpeed=1f;
 
-//	public GameObject leftFoot;
-//	public bool leftFootIsGrounded;
-//	public GameObject rightFoot;
-//	public bool rightFootIsGrounded;
 	public bool isGrounded;
 	
 	public float jumpSpeed=1f;
 	Rigidbody penguinRigid;
 	
+    //The animations for penguins
+
 	void Start () {
 		penguinAnimator = GetComponent<Animator> ();
 		penguinRigid=GetComponent<Rigidbody>();
@@ -111,11 +109,6 @@ public class PenguinCharacter : MonoBehaviour {
 	void CheckGroundStatus()
 	{
 		RaycastHit hitInfo;
-	//	leftFootIsGrounded=Physics.Raycast(leftFoot.transform.position + (Vector3.up * groundCheckOffset), Vector3.down, out hitInfo, groundCheckDistance);
-	//	rightFootIsGrounded=Physics.Raycast(rightFoot.transform.position + (Vector3.up * groundCheckOffset), Vector3.down, out hitInfo, groundCheckDistance);
-	//	penguinAnimator.SetBool("LeftFootIsGrounded",leftFootIsGrounded);		
-	//	penguinAnimator.SetBool("RightFootIsGrounded",rightFootIsGrounded);	
-	//	IsGrounded=leftFootIsGrounded||rightFootIsGrounded;
 
 		isGrounded=Physics.Raycast(transform.position + (Vector3.up * groundCheckOffset), Vector3.down, out hitInfo, groundCheckDistance);
 
@@ -128,7 +121,6 @@ public class PenguinCharacter : MonoBehaviour {
 		}
 		else
 		{
-			//penguinAnimator.applyRootMotion = false;
 			penguinAnimator.SetBool("IsGrounded",false);
 		}
 		
@@ -150,7 +142,7 @@ public class PenguinCharacter : MonoBehaviour {
 			transform.RotateAround(transform.position,transform.up,Time.deltaTime*h*100f);
 
 			penguinRigid.velocity=(transform.up*v+transform.forward)*swimSpeed;	
-			//penguinRigid.AddForce((transform.up*v+transform.forward)*swimSpeed);
+	
 
 		}
 		if (isTobogganing) {
@@ -158,7 +150,7 @@ public class PenguinCharacter : MonoBehaviour {
 			transform.RotateAround(transform.position,transform.up,Time.deltaTime*h*100f);
 			
 			penguinRigid.velocity=transform.forward*tobogganSpeed;	
-			//penguinRigid.AddForce((transform.up*v+transform.forward)*swimSpeed);
+			
 			
 		}
 

@@ -38,13 +38,14 @@ public class PenguinAnimation : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
+        //if all penguins reach the end, ends the race and shows you a score screen
         if(col.gameObject.name == "Race Wall")
         {
 
             temp = int.Parse(counter.text);
             temp++;
 
-            // Places your penguin
+            // Ranks your penguin by what place it came in the race
             if (penguinCharacter.name == "You")
             {
                 place.text = temp.ToString();
@@ -119,6 +120,7 @@ public class PenguinAnimation : MonoBehaviour {
 
     public void ResetRace()
     {
+        //resets all the penguins to original position for new race next time
         if (penguinCharacter.name == "You")
         {
             penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 33);
@@ -142,10 +144,12 @@ public class PenguinAnimation : MonoBehaviour {
     }
 
     void Update () {
+        //penguins toboggan in the race.
         if (race.enabled)
         {
             penguinCharacter.Toboggan();
 
+            //player's penguin's speed is affected by its affection level
             if (penguinCharacter.name == "You")
             {
                 tempLevel = int.Parse(affectionLevel.text);

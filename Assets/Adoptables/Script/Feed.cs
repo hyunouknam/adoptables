@@ -30,6 +30,8 @@ public class Feed : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+        //Spawns food objects
         if (this.penguinAnimator.GetCurrentAnimatorStateInfo(0).IsName("Eat"))
         {
             if (krill.activeSelf)
@@ -51,6 +53,7 @@ public class Feed : MonoBehaviour {
 
 	public void PenguinEat()
 	{
+        //Eating increases some stats and penguin makes a noise
         if (this.penguinAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
             penguinCharacter.Eat();
@@ -63,14 +66,11 @@ public class Feed : MonoBehaviour {
         }
     }
 
+    // These are just to show the food objects
+
     public void EatKrill()
     {
-        //krillLocation = new Vector3(0f, cameraDistance, -4f * cameraDistance);
-        //food = Instantiate(krill, transform.position, transform.rotation);
-        //food.transform.SetParent
-
-        //food.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.red);
-
+    
         if (this.penguinAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
             krill.SetActive(true);

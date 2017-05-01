@@ -21,6 +21,8 @@ public class Gui : MonoBehaviour
     public Text shower;
     public Text defaultMessage;
 
+    //These just turn on and off part of guis
+
     void Awake()
     {
         menu.enabled = false;

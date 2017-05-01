@@ -13,6 +13,10 @@ public class SaveLoad : MonoBehaviour
     public Text displayingName;
     //public InputField inputName;
 
+    public Text gold;
+    public Text silver;
+    public Text bronze;
+
 
     void Start()
     {
@@ -32,6 +36,9 @@ public class SaveLoad : MonoBehaviour
         PlayerPrefs.SetFloat("affection", affection.value);
         PlayerPrefs.SetFloat("health", health.value);
         PlayerPrefs.SetString("level", level.text);
+        PlayerPrefs.SetString("gold", gold.text);
+        PlayerPrefs.SetString("silver", silver.text);
+        PlayerPrefs.SetString("bronze", bronze.text);
     }
 
     public void LoadName()
@@ -46,5 +53,8 @@ public class SaveLoad : MonoBehaviour
         affection.value = PlayerPrefs.GetFloat("affection");
         health.value = PlayerPrefs.GetFloat("health");
         level.text = PlayerPrefs.GetString("level");
+        gold.text = PlayerPrefs.GetString("gold");
+        silver.text = PlayerPrefs.GetString("silver");
+        bronze.text = PlayerPrefs.GetString("bronze");
     }
 }

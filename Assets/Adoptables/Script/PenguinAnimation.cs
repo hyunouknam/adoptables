@@ -77,6 +77,29 @@ public class PenguinAnimation : MonoBehaviour {
         }
     }
 
+    public void ResetRace()
+    {
+        if (penguinCharacter.name == "You")
+        {
+            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 48);
+        }
+
+        if (penguinCharacter.name == "Penguin 2")
+        {
+            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 48);
+        }
+
+        if (penguinCharacter.name == "Penguin 3")
+        {
+            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 48);
+        }
+
+        if (penguinCharacter.name == "Penguin 4")
+        {
+            penguinCharacter.transform.localPosition = new Vector3(penguinCharacter.transform.localPosition.x, penguinCharacter.transform.localPosition.y, penguinCharacter.transform.localPosition.z - 48);
+        }
+    }
+
     void Update () {
         if (race.enabled)
         {

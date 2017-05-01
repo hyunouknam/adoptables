@@ -6,10 +6,15 @@ using UnityEngine.UI;
 public class PenguinAnimation : MonoBehaviour {
 	PenguinCharacter penguinCharacter;
     public Canvas race;
-    public Canvas play;
+    public Canvas finish;
 
+    public Text place;
     public Text counter;
+
+    public Text affectionLevel;
+
     int temp;
+    float tempLevel;
 
 
     void Start () {
@@ -25,14 +30,21 @@ public class PenguinAnimation : MonoBehaviour {
             temp = int.Parse(counter.text);
             temp++;
 
+            // Places your penguin
+            if (penguinCharacter.name == "You")
+            {
+                place.text = temp.ToString();
+            }
+
             if (temp == 4)  // race finished
             {
                 race.enabled = false;
-                play.enabled = true;
+                finish.enabled = true;
                 temp = 0;
                 
             }
             counter.text = temp.ToString();
+
         }
     }
 
@@ -40,7 +52,18 @@ public class PenguinAnimation : MonoBehaviour {
         if (race.enabled)
         {
             penguinCharacter.Toboggan();
-            penguinCharacter.transform.localPosition += Vector3.forward * Time.deltaTime * Random.value * Random.value;
+            if (penguinCharacter.name == "You")
+            {
+                tempLevel = int.Parse(affectionLevel.text);
+                tempLevel = tempLevel * 0.1f;
+    
+                penguinCharacter.transform.localPosition += Vector3.forward * Time.deltaTime * Random.value * Random.value * (1f + tempLevel - 0.2f);
+            }
+            else
+            {
+                penguinCharacter.transform.localPosition += Vector3.forward * Time.deltaTime * Random.value;
+            }
+                
 
         }
 

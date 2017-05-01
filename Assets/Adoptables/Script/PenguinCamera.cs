@@ -10,6 +10,7 @@ public class PenguinCamera : MonoBehaviour
     float cameraAngleY = 0f;
     public float cameraDistance = 3f;
     public Canvas play;
+    public Canvas finish;
 
     public void Start()
     {
@@ -24,7 +25,7 @@ public class PenguinCamera : MonoBehaviour
 
     void Update()
     {
-        if (play.enabled)
+        if (play.enabled || finish.enabled)
         {
             
             CameraRotation();
@@ -52,7 +53,7 @@ public class PenguinCamera : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (play.enabled)
+        if (play.enabled || finish.enabled)
         {
             transform.position = Vector3.Lerp(transform.position, target.transform.position, Time.deltaTime * 10f);
         }
